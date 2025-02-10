@@ -1,1 +1,63 @@
 # fun-facts_of-tiger
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Tigers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff6600;
+        }
+        #fact {
+            background: #fff;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts About Tigers</h1>
+    <div id="fact">Click the button to see a fun fact about tigers!</div>
+    <button onclick="showRandomFact()">Show Random Fact</button>
+
+    <script>
+        const facts = [
+            "Tigers are the largest members of the cat family, with some individuals weighing over 600 pounds (272 kg).",
+            "Each tiger has a unique pattern of stripes, much like human fingerprints. No two tigers have the same stripe pattern.",
+            "Unlike most cats, tigers are strong swimmers and enjoy being in the water. They can swim for several kilometers.",
+            "Tigers are solitary animals, preferring to live and hunt alone rather than in packs like lions.",
+            "Tigers have a powerful roar that can be heard up to 2 miles (3.2 km) away.",
+            "Tigers are carnivorous and primarily hunt large prey such as deer, wild boar, and buffalo.",
+            "Tigers have excellent night vision, allowing them to hunt effectively in low-light conditions.",
+            "Tigers are classified as endangered, with only about 3,900 individuals left in the wild.",
+            "The gestation period for a tiger is about 93 to 112 days, after which a female typically gives birth to 2 to 4 cubs.",
+            "Tigers hold significant cultural importance in many societies, symbolizing strength, power, and bravery."
+        ];
+
+        function showRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
